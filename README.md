@@ -30,6 +30,13 @@
 }
 ```
 
+## 검색·공유 설정
+- 모든 페이지에 `description`, `canonical`, Open Graph(카카오톡·페이스북 미리보기), 트위터 카드, JSON-LD가 들어 있습니다.
+- 공유 미리보기 이미지는 `assets/og-default.png`(1200×630)입니다. 글마다 다른 이미지를 쓰려면 해당 글의 `og:image`와 JSON-LD `image`를 바꾸세요.
+- 새 글을 쓰면 `sitemap.xml`에 `<url>` 한 줄도 추가하세요.
+- 공개 후 [Google Search Console](https://search.google.com/search-console)과 [네이버 서치어드바이저](https://searchadvisor.naver.com)에 사이트와 sitemap.xml을 등록해야 검색에 빨리 잡힙니다.
+- 카카오톡 미리보기가 옛날 모습이면 [카카오 공유 디버거](https://developers.kakao.com/tool/debugger/sharing)에서 캐시를 지우세요.
+
 ## 이름 바꾸기
 "우리 블로그"는 임시 이름입니다. `index.html`, `about.html`, `posts/*.html`에서 "우리 블로그"를 검색해서 바꾸세요. 바꿀 곳은 제목(`<title>`), 로고, 푸터입니다.
 

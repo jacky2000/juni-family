@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jacky2000.github.io/juni-family/sitemap.xml
