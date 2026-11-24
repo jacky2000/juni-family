@@ -1,8 +1,8 @@
-:root{--bg:#fff;--text:#0d1117;--sub:#6b7280;--line:#e8eaed;--soft:#f6f8fa;--blue:#00b4ff;--green:#2bff88;--ink:#0d1117}
+:root{--bg:#fff;--text:#0d1117;--sub:#6b7280;--line:#e8eaed;--soft:#f6f8fa;--blue:#e5233a;--green:#ff7a59;--ink:#0d1117}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system,"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:#0079b3}
+a{color:#c41230}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px}
 
 /* header / footer */
