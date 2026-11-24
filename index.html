@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>우리 블로그 · 아이와 떠나는 여행 기록</title>
+<meta name="description" content="웹에서 확인한 정보만 쓰고, 확인하지 못한 건 그렇다고 적는 여행 블로그.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">우리 블로그</a>
+  <nav><a href="index.html">글</a><a href="about.html">소개</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>아이와 떠나는 여행,<br>확인한 것만 적습니다</h1>
+    <p>주소와 비용은 조사한 날짜와 출처를 함께 적고, 확실하지 않은 정보는 확실하지 않다고 표시합니다.</p>
+  </section>
+
+  <ul class="post-list" id="list"></ul>
+  <noscript>
+    <ul class="post-list"><li><a href="posts/tongyeong-luge.html"><h2>통영 루지, 처음 타는 아이와 가기 전에 알아둘 것</h2><p>2026-11-23</p></a></li></ul>
+  </noscript>
+</main>
+
+<footer class="site-footer"><div class="wrap">© 우리 블로그 · 정보는 작성일 기준이며 방문 전 다시 확인해 주세요.</div></footer>
+
+<script src="assets/posts.js"></script>
+<script>
+(function(){
+  var posts = (window.POSTS||[]).slice().sort(function(a,b){return a.date<b.date?1:-1});
+  var ul = document.getElementById('list');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  ul.innerHTML = posts.map(function(p){
+    var tags = (p.tags||[]).map(function(t,i){return '<span class="tag'+(i%2?' b':'')+'">'+esc(t)+'</span>'}).join('');
+    return '<li><a href="posts/'+esc(p.slug)+'.html"><h2>'+esc(p.title)+'</h2><p>'+esc(p.summary)+'</p><div class="meta">'+tags+esc(p.date)+'</div></a></li>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
